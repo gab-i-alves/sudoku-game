@@ -9,6 +9,11 @@ import java.io.IOException;
  * to their storage mechanism (e.g., file system, database, etc.).
  */
 public class IStorage {
-    void updateGameData(SudokuGame game) throws IOException;
-    SudokuGame getGameData() throws IOException;
+    void updateGameData(SudokuGame game) throws IOException {
+
+    }
+
+    public SudokuGame getGameData() throws IOException {
+        return null;
+    }
 }
