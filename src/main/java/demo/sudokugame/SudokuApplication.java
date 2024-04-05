@@ -1,5 +1,7 @@
 package demo.sudokugame;
 
+import demo.sudokugame.userinterface.IUserInterfaceContract;
+import demo.sudokugame.userinterface.UserInterfaceImpl;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,7 +14,7 @@ public class SudokuApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        uiImpl = new IUserInterfaceImpl(primaryStage);
+        uiImpl = new UserInterfaceImpl(primaryStage);
         try {
             SudokuBuildLogic.build(uiImpl);
         } catch (IOException e) {

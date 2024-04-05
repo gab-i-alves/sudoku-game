@@ -1,5 +1,8 @@
 package demo.sudokugame.problemdomain;
 
+import demo.sudokugame.computationlogic.SudokuUtilities;
+import demo.sudokugame.constants.GameState;
+
 import java.io.Serializable;
 
 /**

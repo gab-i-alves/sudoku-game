@@ -9,7 +9,7 @@ import java.io.IOException;
  * to their storage mechanism (e.g., file system, database, etc.).
  */
 public class IStorage {
-    void updateGameData(SudokuGame game) throws IOException {
+    public void updateGameData(SudokuGame game) throws IOException {
 
     }
 
