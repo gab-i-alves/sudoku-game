@@ -44,7 +44,7 @@ public class GameLogic {
      * @param grid
      * @return
      */
-    private static boolean sudokuIsInvalid(int[][] grid) {
+    static boolean sudokuIsInvalid(int[][] grid) {
         if (rowsAreInvalid(grid)) return true;
         if (columnsAreInvalid(grid)) return true;
         if (squaresAreInvalid(grid)) return true;

@@ -106,7 +106,7 @@ class GameGenerator {
         // Note: not actually solvable until the algorithm below finishes!
         int[][] solvableArray = new int[GRID_BOUNDARY][GRID_BOUNDARY];
 
-        while (solvable == false){
+        while (!solvable){
 
             // Take values from solvedGame and write to new unsolved; i.e. reset to initial state
             SudokuUtilities.copySudokuArrayValues(solvedGame, solvableArray);
