@@ -2,6 +2,7 @@ package demo.sudokugame.userinterface.logic;
 
 import demo.sudokugame.constants.GameState;
 import demo.sudokugame.constants.Messages;
+import demo.sudokugame.computationlogic.GameLogic;
 import demo.sudokugame.problemdomain.IStorage;
 import demo.sudokugame.problemdomain.SudokuGame;
 import demo.sudokugame.userinterface.IUserInterfaceContract;

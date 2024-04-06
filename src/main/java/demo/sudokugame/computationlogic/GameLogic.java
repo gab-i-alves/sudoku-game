@@ -19,8 +19,8 @@ public class GameLogic {
      * Check to see if the incoming state (what the values of each square happen to be) of the game is either Active
      * (i.e. Unsolved) or Complete (i.e. Solved)
      * @param grid A virtual representation of a sudoku puzzle, which may or may not be solved
-     * @return GameState.Active or GameState.Complete, based on analysis of solvedSudoky
-     *
+     * @return GameState.Active or GameState.Complete, based on analysis of solved Sudoku
+     * <p>
      * Rules:
      * - A number may not be repeated among Rows, e.g.:
      *   - [0, 0] == [0 - 8, 1] not allowed
@@ -32,7 +32,7 @@ public class GameLogic {
      *   - [0, 0] == [1, 2] not allowed
      *   - [0, 0] == [3, 4] allowed
      */
-    public static GameState checkforCompletion(int[][] grid) {
+    public static GameState checkForCompletion(int[][] grid) {
         if (sudokuIsInvalid(grid)) return GameState.ACTIVE;
         if (tilesAreNotFilled(grid)) return GameState.ACTIVE;
         return GameState.COMPLETE;
@@ -41,8 +41,6 @@ public class GameLogic {
     /**
      * Checks if the current complete or incomplete state of the game is still a valid state of a Sudoku game,
      * relative to columns, rows, and squares.
-     * @param grid
-     * @return
      */
     static boolean sudokuIsInvalid(int[][] grid) {
         if (rowsAreInvalid(grid)) return true;
@@ -54,8 +52,6 @@ public class GameLogic {
     /**
      * Traverse all tiles and determine if any all are not 0
      * Note: GRID_BOUNDARY = GRID_BOUNDARY
-     * @param grid
-     * @return
      */
     private static boolean tilesAreNotFilled(int[][] grid) {
         for (int xIndex = 0; xIndex < GRID_BOUNDARY; xIndex++) {
@@ -81,7 +77,6 @@ public class GameLogic {
      * [0][3] - [2][2], [3][3] - [5][5], [6][3] - [8][5]
      * [0][6] - [2][2], [3][0] - [5][2], [6][0] - [8][8]
      * @param grid A copy of the Sudoku Game's grid state to compare against
-     * @return
      */
     public static boolean squaresAreInvalid(int[][] grid) {
         // Top three squares
@@ -140,8 +135,6 @@ public class GameLogic {
         }
 
         // If square has repeats, return true
-//        if (collectionHasRepeats(square)) return true;
-//        return false;
         return collectionHasRepeats(square);
     }
 
